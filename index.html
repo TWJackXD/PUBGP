@@ -14,9 +14,11 @@
 <body>
 
 
+
+<!--													　　　圖　標															-->
 <table class="ig-icon">
 	<td style="text-align: center; padding: 18px;">
-		<a href="ig-simple.html" target="myiFrame">
+		<a href="simple/ig-simple.html" target="myiFrame" onclick="mydiv.style.visibility='visible';">
 			<img src="https://bit.ly/3AxXVDE" width="60px"><br>
 			<p style="margin-top:10px;">IG圖片資料庫</p>
 		</a>
@@ -26,21 +28,33 @@
 
 <table class="tools-icon">
 	<td style="text-align: center; padding: 18px;">
-		<a href="tools-simple.html" target="myiFrame">
+		<a href="simple/tools-simple.html" target="myiFrame" onclick="mydiv.style.visibility='visible';">
 			<img src="https://bit.ly/3ENQsCK" width="60px"><br>
 			<p style="margin-top:10px;">實用套件下載</p>
 		</a>
 	</td>
 </table>
+<!--													　　　圖　標															-->
 
+<!--													　　　圖　片															-->
 <table class="big-logo">
 	<td>
 		<img src="https://bit.ly/3gloNQe" width="300px"><br/>
 		<p style="text-align:center;">益智桌遊玩聚社 專屬</p>
 	</td>
 </table>
+<!--													　　　圖　片															-->
 
-<iframe src="iframe/main.html" style="border:0px #ffffff none; background: white;" name="myiFrame" frameborder="1" marginheight="0px" marginwidth="0px" height="430px" width="915px" scrolling="yes"></iframe>
+<div class="anchor">
+<!-- Draggable DIV -->
+<div id="mydiv">
+  <!-- Include a header DIV with the same name as the draggable DIV, followed by "header" -->
+  <div id="mydivheader"><span class="closebtn" onclick="mydiv.style.visibility='hidden';" style="font-size:30px">&times;</span></div>
+
+  <iframe src="iframe/main.html" style="border:0px #ffffff none; background: white;" name="myiFrame" frameborder="1" marginheight="0px" marginwidth="0px" height="460px" width="800px" scrolling="yes"></iframe>
+</div>
+
+</div>
 
 
 </body>
@@ -57,5 +71,59 @@
 <!--													　　　Ｊ　Ｓ　　						　　							-->
 <script type="text/javascript">
 document.getElementById('copyright-yr').appendChild(document.createTextNode(new Date().getFullYear()))
+
+// Make the DIV element draggable:
+dragElement(document.getElementById("mydiv"));
+
+function dragElement(elmnt) {
+  var pos1 = 0, pos2 = 0, pos3 = 0, pos4 = 0;
+  if (document.getElementById(elmnt.id + "header")) {
+    // if present, the header is where you move the DIV from:
+    document.getElementById(elmnt.id + "header").onmousedown = dragMouseDown;
+  } else {
+    // otherwise, move the DIV from anywhere inside the DIV:
+    elmnt.onmousedown = dragMouseDown;
+  }
+
+  function dragMouseDown(e) {
+    e = e || window.event;
+    e.preventDefault();
+    // get the mouse cursor position at startup:
+    pos3 = e.clientX;
+    pos4 = e.clientY;
+    document.onmouseup = closeDragElement;
+    // call a function whenever the cursor moves:
+    document.onmousemove = elementDrag;
+  }
+
+  function elementDrag(e) {
+    e = e || window.event;
+    e.preventDefault();
+    // calculate the new cursor position:
+    pos1 = pos3 - e.clientX;
+    pos2 = pos4 - e.clientY;
+    pos3 = e.clientX;
+    pos4 = e.clientY;
+    // set the element's new position:
+    elmnt.style.top = (elmnt.offsetTop - pos2) + "px";
+    elmnt.style.left = (elmnt.offsetLeft - pos1) + "px";
+  }
+
+  function closeDragElement() {
+    // stop moving when mouse button is released:
+    document.onmouseup = null;
+    document.onmousemove = null;
+  }
+}
+
+
+
+
+
+
+
+
+
 </script>
+
 <!--													　　　Ｊ　Ｓ　　						　　							-->

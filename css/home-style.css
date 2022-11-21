@@ -1,0 +1,98 @@
+html, body {margin: 0; height: 100%; overflow: hidden}
+
+body {
+  background-image: url('https://bit.ly/3Azd7Al');
+  background-repeat: no-repeat;
+  background-attachment: fixed;
+  background-size: 100% 100%;
+  font-family: Microsoft JHengHei;
+  overflow-x: hidden;
+  margin: 0;
+}
+
+.box1{position:absolute;bottom: 0px;width: 100%;}
+.box2{position: relative;}
+
+footer{
+	background-color: dimgray;
+	opacity: 50%;
+	width: 99.5%;
+	text-align: center;
+	padding: 10px;
+	color:white;
+}
+
+
+.ig-icon{
+	margin-top:60px;
+	margin-left: 60px;
+	font-size: 14px;
+}
+.tools-icon{
+	margin-top:30px;
+	margin-left: 60px;
+	font-size: 14px;
+}
+
+
+.ig-icon td, .tools-icon td{
+	border-radius: 10px;
+	transition: 0.13s;
+}
+
+.ig-icon td:hover, .tools-icon td:hover{
+	background-color: white;
+	transition: 0.13s;
+	cursor: pointer;
+}
+
+.big-logo{
+	position: fixed;
+	top: 8%;
+	right:4.5%;
+	background-color: white;
+	border: 0px;
+	border-radius: 10px;
+	background-color: transparent;
+}
+.big-logo img{
+	border-radius: 10px;
+}
+
+a{
+	text-decoration: none;
+	color:black;
+
+}
+
+#mydiv {
+	position: absolute;
+	z-index: 9;
+	background-color: #f1f1f1;
+	text-align: center;
+}
+
+#mydivheader {
+	cursor: move;
+	z-index: 10;
+	background-color: #C691FE;
+	color: #fff;
+	padding-right: 20px;
+	text-align: right;
+	border-radius: 15px 15px 0px 0px;
+}
+
+
+.anchor{
+	position: fixed;
+	top: 8%;
+	left:18%;
+	background-color: white;
+	border: 0px;
+	border-radius: 10px;
+	background-color: transparent;
+}
+
+iframe{
+	border-radius: 0px 0px 15px 15px;
+}
