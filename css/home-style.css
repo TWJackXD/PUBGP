@@ -62,3 +62,13 @@ a{
 	color:black;
 
 }
+
+iframe{
+	position: fixed;
+	top: 8.3%;
+	right:25%;
+	background-color: white;
+	border: 0px;
+	border-radius: 10px;
+	background-color: transparent;
+}
