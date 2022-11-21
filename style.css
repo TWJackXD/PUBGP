@@ -128,3 +128,11 @@
 		color: #c7c7c7;
 		transition: 0.3s;
 	}
+
+	.gradient2{
+		background: -webkit-linear-gradient(#fc5c7d, #6a82fb);
+		-webkit-background-clip: text;
+		-webkit-text-fill-color: transparent;
+	}
+
+		
