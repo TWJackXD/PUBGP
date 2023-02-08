@@ -1,7 +1,7 @@
 html, body {margin: 0; height: 100%; overflow: hidden}
 
 body {
-  background-image: url('https://bit.ly/3Azd7Al');
+  background-image: url('https://bit.ly/40H2h6C');
   background-repeat: no-repeat;
   background-attachment: fixed;
   background-size: 100% 100%;
@@ -75,7 +75,7 @@ a{
 #mydivheader {
 	cursor: move;
 	z-index: 10;
-	background-color: #C691FE;
+	background-color: #91b2fe;
 	color: #fff;
 	padding-right: 20px;
 	text-align: right;
